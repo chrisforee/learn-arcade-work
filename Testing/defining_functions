@@ -1,0 +1,18 @@
+def print_hello():
+    """This is a comment that describes the function"""
+    print("Hello!")
+
+
+def print_goodbye():
+    print("Goodbye!")
+
+
+def main():
+    """This is the main program function"""
+    print_goodbye()
+    print_hello()
+
+
+if __name__ == '__main__':
+    """Call/Run the main function"""
+    main()

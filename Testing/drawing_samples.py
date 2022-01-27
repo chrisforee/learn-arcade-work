@@ -31,7 +31,7 @@ arcade.draw_lrtb_rectangle_filled(0, 599, 300, 0, arcade.csscolor.GREEN)
 # Center of 100, 320
 # Width of 20
 # Height of 60
-arcade.draw_rectangle_filled(100, 320, 20, 60, arcade.color.SIENNA)
+arcade.draw_rectangle_filled(100, 320, 20, 60, arcade.csscolor.SIENNA)
 
 # Tree top
 arcade.draw_circle_filled(100, 350, 30, arcade.csscolor.DARK_GREEN)
