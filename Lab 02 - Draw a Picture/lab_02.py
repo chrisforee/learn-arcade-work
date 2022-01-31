@@ -20,7 +20,7 @@ arcade.draw_line(305, 110, 345, 110, (0, 0, 0), 5)
 # Drawing stars
 arcade.draw_circle_filled(400, 400, 5, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(650, 500, 5, arcade.csscolor.WHITE, 0, -1)
-arcade.draw_circle_filled(100, 550, 10, arcade.csscolor.WHITE, 0, -1)
+arcade.draw_circle_filled(100, 550, 3.65, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(310, 290, 3, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(540, 310, 4, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(420, 610, 3, arcade.csscolor.WHITE, 0, -1)
@@ -28,6 +28,10 @@ arcade.draw_circle_filled(330, 420, 3, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(210, 510, 3, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_circle_filled(240, 380, 6, arcade.csscolor.WHITE, 0, -1)
 
+# Draw Satellite
+arcade.draw_rectangle_filled(520, 440, 35, 35, arcade.csscolor.DARK_SLATE_GRAY, 35)
+arcade.draw_rectangle_filled(520, 440, 195, 5, arcade.csscolor.DARK_SLATE_GRAY, 35)
+arcade.draw_rectangle_filled(520, 440, 35, 35, arcade.csscolor.DARK_SLATE_GRAY, 35)
 # Finished drawing
 arcade.finish_render()
 
