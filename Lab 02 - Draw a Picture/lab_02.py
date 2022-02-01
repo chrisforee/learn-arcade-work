@@ -32,6 +32,15 @@ arcade.draw_circle_filled(240, 380, 6, arcade.csscolor.WHITE, 0, -1)
 arcade.draw_rectangle_filled(520, 440, 35, 35, arcade.csscolor.DARK_SLATE_GRAY, 35)
 arcade.draw_rectangle_filled(520, 440, 195, 5, arcade.csscolor.DARK_SLATE_GRAY, 35)
 arcade.draw_rectangle_filled(520, 440, 35, 35, arcade.csscolor.DARK_SLATE_GRAY, 35)
+arcade.draw_rectangle_filled(460, 480, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+arcade.draw_rectangle_filled(475, 470, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+arcade.draw_rectangle_filled(490, 460, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+arcade.draw_rectangle_filled(550, 420, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+arcade.draw_rectangle_filled(565, 410, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+arcade.draw_rectangle_filled(580, 400, 115, 8, arcade.csscolor.LIGHT_GOLDENROD_YELLOW, 125)
+
+# Draw Moon
+
 # Finished drawing
 arcade.finish_render()
 
