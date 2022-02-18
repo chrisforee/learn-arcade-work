@@ -7,14 +7,18 @@ SCREEN_WIDTH = 650
 SCREEN_HEIGHT = 650
 
 
-def draw_alien_head():
+def draw_alien_head(x, y):
     """Draw the Alien's head"""
-    arcade.draw_circle_filled(325, 125, 150, (141, 245, 66), 0, -1)
-    arcade.draw_circle_outline(325, 125, 150, (252, 252, 252), 5, 0, -1)
+
+    # Draw a point at x, y for reference
+    arcade.draw_point(x, y, arcade.color.RED, 5)
+    # Draw head
+    arcade.draw_circle_filled(325 + x, 125 + y, 150, (141, 245, 66), 0, -1)
+    arcade.draw_circle_outline(325 + x, 125 + y, 150, (252, 252, 252), 5, 0, -1)
     # Draw the eyes and mouth
-    arcade.draw_ellipse_filled(275, 200, 98, 55, (0, 0, 0), 20, 10)
-    arcade.draw_ellipse_filled(375, 200, 98, 55, (0, 0, 0), 160, 10)
-    arcade.draw_line(305, 50, 345, 50, (0, 0, 0), 5)
+    arcade.draw_ellipse_filled(275 + x, 200 + y, 98, 55, (0, 0, 0), 20, 10)
+    arcade.draw_ellipse_filled(375+ x, 200 + y, 98, 55, (0, 0, 0), 160, 10)
+    arcade.draw_line(305 + x, 50 + y, 345 + x, 50 + y, (0, 0, 0), 5)
 
 
 def draw_stars():
@@ -60,7 +64,8 @@ def main():
     arcade.start_render()
 
     # Draw the alien head
-    draw_alien_head()
+    draw_alien_head(1, 1)
+
 
     # Draw the stars
     draw_stars()
