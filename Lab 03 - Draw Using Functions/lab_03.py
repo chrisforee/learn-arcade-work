@@ -1,10 +1,27 @@
 """ Using drawings from Lab02 to create drawing functions in Lab 03"""
 # Import the arcade library
 import arcade
+import random
 
 # Create window size variables
 SCREEN_WIDTH = 650
 SCREEN_HEIGHT = 650
+
+
+def draw_stars(x, y):
+    """Draw the stars at random plots based on x, y points"""
+
+    arcade.draw_circle_filled(x + (random.randint(10, 300)),
+                              y + (random.randint(10, 300)), 5, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(x + (random.randint(50, 60)),
+                              y + (random.randint(100, 200)), 5, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(x - 100, y - 250, 3.65, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(310, 290, 3, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(540, 310, 4, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(420, 610, 3, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(330, 420, 3, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(210, 510, 3, arcade.csscolor.WHITE, 0, -1)
+    arcade.draw_circle_filled(240, 380, 6, arcade.csscolor.WHITE, 0, -1)
 
 
 def draw_alien_head(x, y):
@@ -19,19 +36,6 @@ def draw_alien_head(x, y):
     arcade.draw_ellipse_filled(x - 55, y + 55, 98, 55, (0, 0, 0), 20, 10)
     arcade.draw_ellipse_filled(x + 55, y + 55, 98, 55, (0, 0, 0), 160, 10)
     arcade.draw_line(x - 35, y - 75, x + 20, y - 75, (0, 0, 0), 5)
-
-
-def draw_stars():
-    """Draw the stars"""
-    arcade.draw_circle_filled(400, 400, 5, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(650, 500, 5, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(100, 550, 3.65, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(310, 290, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(540, 310, 4, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(420, 610, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(330, 420, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(210, 510, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(240, 380, 6, arcade.csscolor.WHITE, 0, -1)
 
 
 def draw_satellite():
@@ -66,9 +70,9 @@ def main():
     # Draw the alien head
     draw_alien_head(275, 125)
 
-
     # Draw the stars
-    draw_stars()
+    """Best practice to place x, y coordinates at center of window"""
+    draw_stars(325, 325)
 
     # Draw the satellite
     draw_satellite()
