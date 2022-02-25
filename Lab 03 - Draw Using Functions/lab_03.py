@@ -1,27 +1,11 @@
 """ Using drawings from Lab02 to create drawing functions in Lab 03"""
-# Import the arcade library
+# Import the arcade and random module
 import arcade
 import random
 
 # Create window size variables
 SCREEN_WIDTH = 650
 SCREEN_HEIGHT = 650
-
-
-def draw_stars(x, y):
-    """Draw the stars at random plots based on x, y points"""
-
-    arcade.draw_circle_filled(x + (random.randint(10, 300)),
-                              y + (random.randint(10, 300)), 5, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(x + (random.randint(50, 60)),
-                              y + (random.randint(100, 200)), 5, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(x - 100, y - 250, 3.65, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(310, 290, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(540, 310, 4, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(420, 610, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(330, 420, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(210, 510, 3, arcade.csscolor.WHITE, 0, -1)
-    arcade.draw_circle_filled(240, 380, 6, arcade.csscolor.WHITE, 0, -1)
 
 
 def draw_alien_head(x, y):
@@ -60,6 +44,21 @@ def draw_moon():
     arcade.draw_circle_filled(107, 459, 2, arcade.csscolor.SLATE_GREY, 2, -1)
 
 
+def draw_stars(x, y, z):
+    """Draw the stars at random plots based on x, y points. z determines the density of stars on screen"""
+    i = 0
+    while i < z :
+        arcade.draw_circle_filled(x + (random.randint(1, 625)),
+                                  y + (random.randint(1, 625)), (random.randint(1, 3)), arcade.csscolor.WHITE, 0, -1)
+        arcade.draw_circle_filled(x - (random.randint(1, 625)),
+                                  y - (random.randint(1, 625)), (random.randint(1, 3)), arcade.csscolor.WHITE, 0, -1)
+        arcade.draw_circle_filled(x + (random.randint(1, 625)),
+                                  y - (random.randint(1, 625)), (random.randint(1, 3)), arcade.csscolor.WHITE, 0, -1)
+        arcade.draw_circle_filled(x - (random.randint(1, 625)),
+                                  y + (random.randint(1, 625)), (random.randint(1, 3)), arcade.csscolor.WHITE, 0, -1)
+        i += 1
+
+
 def main():
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Learn Arcade Lab 02 - Alien Watching")
     # Set the background color
@@ -67,18 +66,17 @@ def main():
     # Ready to draw
     arcade.start_render()
 
-    # Draw the alien head
-    draw_alien_head(275, 125)
-
     # Draw the stars
-    """Best practice to place x, y coordinates at center of window"""
-    draw_stars(325, 325)
+    draw_stars(325, 325, 150)
 
     # Draw the satellite
     draw_satellite()
 
     # Draw the moon
     draw_moon()
+
+    # Draw the alien head
+    draw_alien_head(275, 125)
 
     # Finish and run
     arcade.finish_render()
